@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link rel="stylesheet" href="Styles.css">
+  <title>Calculatrice Scientifique</title>
+</head>
+
+<body>
+  <div class="calc">
+    <div class="top"><span class="orange">Alino</span><span class="blanc">Fx</span><span class="vert">965</span><button
+        id="toggleBtn" onclick="toggleSci()">SCI ON</button></div>
+    <div class="history" id="history"></div>
+    <div class="display" id="display">0</div>
+    <div class="grid" id="grid">
+      <!-- Ligne SCI -->
+      <button class="sci" onclick="addFunc('sin(')">sin</button>
+      <button class="sci" onclick="addFunc('cos(')">cos</button>
+      <button class="sci" onclick="addFunc('tan(')">tan</button>
+      <button class="sci" onclick="addFunc('π')">π</button>
+      <button class="sci" onclick="addFunc('e')">e</button>
+
+      <button class="sci" onclick="addFunc('√(')">√</button>
+      <button class="sci" onclick="addFunc('^')">xʸ</button>
+      <button class="sci" onclick="addFunc('log(')">log</button>
+      <button class="sci" onclick="addFunc('ln(')">ln</button>
+      <button class="sci" onclick="addFunc('!')">x!</button>
+
+      <button class="sci" onclick="addFunc('(')">(</button>
+      <button class="sci" onclick="addFunc(')')">)</button>
+      <button class="sci" onclick="addFunc('1/')">1/x</button>
+      <button class="sci" onclick="addFunc('%')">%</button>
+      <button class="sci" onclick="toggleDeg()" id="degBtn">DEG</button>
+
+      <!-- Ligne normale -->
+      <button class="util" onclick="clearAll()">AC</button>
+      <button class="util" onclick="backspace()">⌫</button>
+      <button class="util" onclick="addFunc('%')">%</button>
+      <button class="op" onclick="addFunc('/')">÷</button>
+      <button class="op" onclick="addFunc('*')">×</button>
+
+      <button class="num" onclick="addFunc('7')">7</button>
+      <button class="num" onclick="addFunc('8')">8</button>
+      <button class="num" onclick="addFunc('9')">9</button>
+      <button class="op" onclick="addFunc('-')">−</button>
+      <button class="op" onclick="addFunc('+')">+</button>
+
+      <button class="num" onclick="addFunc('4')">4</button>
+      <button class="num" onclick="addFunc('5')">5</button>
+      <button class="num" onclick="addFunc('6')">6</button>
+      <button class="num" onclick="addFunc('1')">1</button>
+      <button class="num" onclick="addFunc('2')">2</button>
+
+      <button class="num" onclick="addFunc('3')">3</button>
+      <button class="num zero" onclick="addFunc('0')">0</button>
+      <button class="num" onclick="addFunc('.')">,</button>
+      <button class="equal" onclick="calculate()">=</button>
+    </div>
+  </div>
+
+  <script src="calculatrice.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,171 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+    -webkit-tap-highlight-color: transparent;
+}
+
+body {
+    background: #0f0f12;
+    min-height: 100dvh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.calc {
+    width: 100%;
+    max-width: 430px;
+    background: #1a1a20;
+    border-radius: 28px;
+    padding: 16px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, .5);
+}
+
+.top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #888;
+    font-size: 12px;
+    padding: 0 4px 8px;
+}
+
+span {
+    font-size: 2.5rem;
+}
+
+.orange {
+    color: orange;
+}
+
+.blanc {
+    color: white;
+}
+
+.vert {
+    color: green;
+}
+.top button {
+    background: #2e2e38;
+    color: #fff;
+    border: 0;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.top button.active {
+    background: #ff9f0a;
+}
+
+.history {
+    color: #888;
+    font-size: 15px;
+    min-height: 22px;
+    text-align: right;
+    padding: 0 8px;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.display {
+    color: #fff;
+    font-size: 44px;
+    font-weight: 700;
+    text-align: right;
+    min-height: 60px;
+    padding: 0 8px 8px;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.display.small {
+    font-size: 28px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 8px;
+}
+
+button {
+    border: 0;
+    border-radius: 16px;
+    /* aspect-ratio: 1/0.85;  <-- SUPPRIMÉ */
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    color: #fff;
+    background: #2e2e38;
+    transition: transform .08s;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+button:active {
+    transform: scale(.92);
+}
+
+button.sci {
+    background: #23232e;
+    color: #a5a5ff;
+    font-size: 14px;
+}
+
+button.sci.hidden {
+    display: none;
+}
+
+button.num {
+    background: #2e2e38;
+    font-size: 20px;
+}
+
+button.op {
+    background: #ff9f0a;
+}
+
+button.util {
+    background: #4a4a58;
+}
+
+button.equal {
+    background: #ff9f0a;
+    grid-column: span 2;
+    height: 50px;
+    font-size: 20px;
+}
+
+button.zero {
+    height: 50px;
+    text-align: left;
+    padding-left: 22px;
+    font-size: 20px;
+}
+
+@media(max-width:400px) {
+    .calc {
+        padding: 12px;
+    }
+
+    button {
+        font-size: 14px;
+    }
+
+    button.num,
+    button.equal,
+    button.zero {
+        font-size: 18px;
+    }
+
+    .display {
+        font-size: 38px;
+    }
+}
